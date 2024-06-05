@@ -10,7 +10,18 @@
  * Write any other JavaScript below
  */
 
-+( function() {
++(function () {
   const university = "UOC";
   console.log(`Hello, ${university}!`);
-} )();
+})();
+
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  var menu = document.getElementById("menu");
+  if (menu.classList.contains("hidden")) {
+    menu.classList.remove("hidden");
+    menu.classList.add("block");
+  } else {
+    menu.classList.remove("block");
+    menu.classList.add("hidden");
+  }
+});

@@ -1,35 +1,81 @@
 <!DOCTYPE html>
 
-<html>
+<html class="h-full">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <!-- <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"> -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
         <!-- do not remove this line! -->
-        <link href="./index.css" type="text/css" rel="stylesheet" />
-        <title>UOC Boilerplate</title>
+        <!-- <link href="./index.css" type="text/css" rel="stylesheet" /> -->
+        <title>PEC2 - Enchanting Kitchen</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="./assets/images/CatalanCookinglogoCompress.png?width=16"
+        />
     </head>
-    <body>
-        <div class="uoc-container">
-            <picture>
-                <source
-                    srcset="./assets/images/logo.png?as=webp&width=350"
-                    type="image/webp"
-                />
+    <body
+        class="min-h-full text-base leading-6 text-secondary p0 m0 bg-bg-color-primary md"
+    >
+        <include src="./views/header.html"></include>
+        <main class="min-h-[65vh]">
+            <div class="home page" id="home">
                 <img
-                    src="./assets/images/logo.png?width=350"
-                    alt="Universitat Oberta de Catalunya"
-                    class="uoc-logo"
+                    src="./assets/images/chef-4021815_1920.jpg?width=1200"
+                    alt="Image 2"
+                    class="home__image"
                 />
-            </picture>
-            <h1 class="text-3xl font-bold underline">Hello, UOC!</h1>
-            <p>
-                This is a starter template for the Advanced HTML and CSS Tools
-                courses from the Master's Program in Multimedia Applications and
-                the Master's Program in Web App and Website Development at the
-                Universitat Oberta de Catalunya.
-            </p>
-        </div>
+                <br />
+                <h1 class="home__title">Enchanting Kitchen</h1>
+                <h2 class="home__subtitle">
+                    Step into the culinary realm of Enchanting Kitchen, where
+                    flavors dance and creativity reigns supreme.
+                </h2>
+                <p class="home__text">
+                    Welcome to the Enchanting Kitchen, where culinary magic
+                    meets competitive flair! In this thrilling contest, skilled
+                    chefs from around the globe converge to showcase their
+                    gastronomic prowess and vie for the prestigious title of
+                    Enchanting Kitchen Champion. Amidst the sizzle of sauté pans
+                    and the aroma of exotic spices, competitors bring their
+                    unique culinary visions to life, transforming humble
+                    ingredients into works of art that tantalize the taste buds
+                    and captivate the imagination. From the precision of knife
+                    work to the symphony of flavors dancing on the palate, each
+                    dish tells a story of passion, innovation, and dedication to
+                    the craft. Judges, esteemed experts in the realm of fine
+                    dining, deliberate with discerning palates and keen eyes,
+                    seeking out the perfect balance of creativity, technique,
+                    and taste. But it's not just about the thrill of victory;
+                    it's about the camaraderie forged in the heat of the
+                    kitchen, the shared love for all things epicurean, and the
+                    joy of celebrating food as a universal language that unites
+                    us all. As the competition heats up and the tension mounts,
+                    only one chef will emerge victorious, their culinary legacy
+                    etched in the annals of Enchanting Kitchen history. So let
+                    the flames of inspiration ignite, and may the Enchanting
+                    Kitchen bestow its magic upon all who dare to dream, cook,
+                    and conquer!
+                </p>
+                <a href="#" class="home__link home__link--form"
+                    ><i class="fa-solid fa-sign-in"></i> Sign in here
+                </a>
+                <br />
+                <a href="#" class="home__link home__link--about"
+                    >About us <i class="fas fa-info-circle"></i
+                ></a>
+                <br />
+                <p class="home__contact">
+                    <i class="fa-solid fa-mobile-phone"></i> Phone: 123-456-7890
+                    <br /><i class="fa-solid fa-envelope"></i>
+                    Contact: contact@example.com
+                </p>
+            </div>
+        </main>
         <include src="./views/footer.html"></include>
         <script type="module" src="./assets/scripts/main.js"></script>
         <!-- do not remove this line! -->
