@@ -1,25 +1,32 @@
-<header class="bk1:mx-12 h-[10vh] shrink-0 bg-white shadow">
-    <nav class="container mx-auto px-6 py-3">
-        <div
-            class="flex flex-col md:flex-row md:justify-between md:items-center"
-        >
-            <div class="flex justify-between items-center">
-                <a href="/" class="header__link mx-5">
+<header class="bg-bg-color-primary">
+    <nav class="px-10 sm:px-6">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="flex flex-shrink-0 items-center">
+                <a href="/">
                     <img
                         src="./assets/images/CatalanCookinglogoCompress.png?as=webp"
                         type="image/webp"
                         alt="Logo of the cooking contest "
-                        class="header__logo rounded-full w-10 h-10"
+                        class="rounded-full w-auto h-10"
                     />
                 </a>
-                <div class="md:hidden">
+                <div class="absolute hidden py-10 right-0 items-end sm:block">
                     <button
                         id="menu-toggle"
                         type="button"
-                        class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-secondary hover:bg-secondary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
                         aria-label="toggle menu"
+                        aria-controls="mobile-menu"
+                        aria-expanded="false"
                     >
-                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                        <svg
+                            viewBox="0 0 24 24"
+                            class="block h-6 w-6 fill-current"
+                            fill="none"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                        >
                             <path
                                 fill-rule="evenodd"
                                 d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
@@ -27,27 +34,30 @@
                         </svg>
                     </button>
                 </div>
-            </div>
-            <div id="menu" class="md:flex block md:mx-6">
-                <div class="flex flex-col md:flex-row md:mx-6">
+                <div
+                    id="menu"
+                    class="flex space-x-4 justify-end ml-auto sm:hidden"
+                >
+                    <!-- <div class="flex flex-col md:flex-row md:mx-6"> -->
                     <a
                         href="/src/chefs.html"
-                        class="header__link my-1 text-sm text-gray-700 leading-5 hover:text-blue-500 md:mx-4 md:my-0"
+                        class="text-secondary font-bold rounded-md px-3 py-2 text-sm"
                         data-target="chefs"
                         >Chefs</a
                     >
                     <a
                         href="#"
-                        class="header__link my-1 text-sm text-gray-700 leading-5 hover:text-blue-500 md:mx-4 md:my-0"
+                        class="text-secondary font-bold rounded-md px-3 py-2 text-sm"
                         data-target="about"
                         >About Sant Cugat Culinary Contest</a
                     >
                     <a
-                        href="#"
-                        class="header__link my-1 text-sm text-gray-700 leading-5 hover:text-blue-500 md:mx-4 md:my-0"
+                        href="/src/contact.html"
+                        class="text-secondary font-bold rounded-md px-3 py-2 text-sm"
                         data-target="contact"
                         >Contact us</a
                     >
+                    <!-- </div> -->
                 </div>
             </div>
         </div>

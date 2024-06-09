@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
+        <!-- do not remove this line! -->
+        <title>PEC3 - Enchanting Kitchen</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="./assets/images/CatalanCookinglogoCompress.png?width=16"
+        />
+    </head>
+    <body>
+        <include src="./views/header.html"></include>
+        <main class="flex flex-col items-center bg-bg-color-primary">
+            <div class="px-12 pb-10" id="contact">
+                <div
+                    class="flex flex-col gap-20 justify-around lg:w-9/12 md:w-10/12 sm:w-full px-12 sm:px-4 pb-10"
+                >
+                    <div class="p-0">
+                        <h1
+                            class="py-4 text-3xl md:text-2xl sm:text-xl font-bold tracking-tight text-secondary text-center"
+                        >
+                            Join Us!
+                        </h1>
+                        <form
+                            class="form"
+                            name="contact__form"
+                            method="post"
+                            data-netlify-recaptcha="true"
+                            netlify
+                        >
+                            <include
+                                src="./views/components/input.html"
+                                locals='{
+                            "title": "Name and Surname",
+                            "text": "name",
+                            "type":"text",
+                            "placeholder":"",
+                            "required":true
+                            }'
+                            >
+                            </include>
+                            <include
+                                src="./views/components/input.html"
+                                locals='{
+                            "title": "Email",
+                            "text": "email",
+                            "type":"email",
+                            "placeholder":"joinus@enchantingkitchen.com",
+                            "required":true
+                            }'
+                            >
+                            </include>
+                            <div class="my-5">
+                                <label
+                                    class="block text-sm leading-6 text-secondary font-bold"
+                                    for="form__select"
+                                    >I want information about</label
+                                >
+                                <div class="relative mt-2 rounded-md shadow-sm">
+                                    <select
+                                        class="block w-full rounded-md border-0 py-1.5 pl-3 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 bg-light placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-info sm:text-sm sm:leading-6"
+                                        id="form__select"
+                                        aria-label="Check one or more choices"
+                                        multiple
+                                        size="5"
+                                        name="info"
+                                    >
+                                        <option selected disabled>
+                                            Check one or more choices
+                                        </option>
+                                        <option value="1">Contests</option>
+                                        <option value="2">Courses</option>
+                                        <option value="3">Workshops</option>
+                                        <option value="4">
+                                            Extra Activities
+                                        </option>
+                                        <option value="5">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="my-5">
+                                <label
+                                    class="block text-sm leading-6 text-secondary font-bold"
+                                    for="form__text"
+                                    >Message</label
+                                >
+                                <div class="relative mt-2 rounded-md shadow-sm">
+                                    <textarea
+                                        class="block w-full rounded-md border-0 py-1.5 pl-3 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 bg-light placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-info sm:text-sm sm:leading-6"
+                                        id="form__text"
+                                        rows="3"
+                                        name="message"
+                                    ></textarea>
+                                </div>
+                            </div>
+                            <div class="my-5">
+                                <input
+                                    class="accent-secondary w-4 h-4"
+                                    id="check__info"
+                                    type="checkbox"
+                                    value="1"
+                                    checked
+                                    name="subscribe"
+                                />
+                                <label
+                                    class="text-sm leading-6 text-gray-900"
+                                    for="check__info"
+                                >
+                                    We'd love for you to subscribe and stay up
+                                    to date with all the latest news!
+                                </label>
+                            </div>
+                            <div data-netlify-recaptcha="true"></div>
+                            <div class="flex justify-center my-6">
+                                <button
+                                    class="btn bg-primary text-tertiary hover:bg-background hover:text-primary shadow-lg font-bold py-2 px-4 rounded"
+                                    type="submit"
+                                >
+                                    Send
+                                </button>
+                            </div>
+                            <div
+                                class="alert bg-success"
+                                role="alert"
+                                id="alert-success"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-8 h-8 sm:w-9 sm:h-9 text-success"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
+                                </svg>
+                                <p>
+                                    Thanks for getting in touch. We'll get back
+                                    to you as soon as we can.
+                                </p>
+                            </div>
+                            <div
+                                class="alert bg-danger"
+                                role="alert"
+                                id="alert-error"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-8 h-8 sm:w-9 sm:h-9 text-danger"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+                                    />
+                                </svg>
+                                <p>
+                                    I'm really sorry, but something has gone
+                                    wrong. Please try sending it again, and I'll
+                                    do my best to get it to you as soon as I
+                                    can.
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <include src="./views/footer.html"></include>
+        <script type="module" src="./assets/scripts/main.js"></script>
+        <script type="module" src="./assets/scripts/form.js"></script>
+        <!-- do not remove this line! -->
+    </body>
+</html>
